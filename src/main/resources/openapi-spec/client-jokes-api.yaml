@@ -1,0 +1,58 @@
+openapi: 3.0.3
+info:
+  title: document-kit-service
+  version: 1.0.0
+servers:
+  - url: 'https://v2.jokeapi.dev'
+paths:
+  /joke/Any:
+    get:
+      summary: get jokes from "any" category
+      operationId: get-jokes
+      description: 'get jokes'
+      parameters:
+        - name: amount
+          in: query
+          schema:
+            type: integer
+            minimum: 2
+            default: 10
+          required: false
+          description: specifies how many jokes should be returned in the service response
+        - name: lang
+          in: query
+          required: false
+          schema:
+            type: string
+            default: 'en'
+          description: specifies the language of the jokes, e.g. cs, de, en, it, ru
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JokesExternalApiResponse'
+      tags:
+        - ExternalJokesService
+components:
+  schemas:
+    JokesExternalApiResponse:
+      type: object
+      properties:
+        amount:
+          type: integer
+        jokes:
+          type: array
+          items:
+            $ref: '#/components/schemas/JokeExternalApiResponse'
+    JokeExternalApiResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        category:
+          type: string
+        joke:
+          type: string
+

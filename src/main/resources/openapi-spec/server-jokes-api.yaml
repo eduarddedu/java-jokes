@@ -1,0 +1,49 @@
+openapi: 3.0.3
+info:
+  title: document-kit-service
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8080/'
+paths:
+  /jokes:
+    get:
+      summary: returns a list of jokes
+      operationId: get-jokes
+      description: 'get jokes'
+      parameters:
+        - in: query
+          name: count
+          schema:
+            type: integer
+            default: 5
+            minimum: 2
+            maximum: 100
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JokesResponse'
+      tags:
+        - JokesController
+components:
+  schemas:
+    JokeResponse:
+      type: object
+      properties:
+        externalId:
+          type: integer
+        category:
+          type: string
+        joke:
+          type: string
+    JokesResponse:
+      type: object
+      properties:
+        count:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/JokeResponse'
