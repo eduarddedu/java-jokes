@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: ${APPLICATION_SERVICE_NAME:jokes-service}
+
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/test}
+
+services:
+  official-jokes-api:
+    url: https://v2.jokeapi.dev

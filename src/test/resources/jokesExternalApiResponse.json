@@ -1,0 +1,15 @@
+{
+  "amount": 5,
+  "jokes": [
+    {
+      "category": "Dark",
+      "joke": "Nowadays people are so sensitive, you can't even say \"black paint\" anymore.\nInstead, you have to say \"Jamal, please paint the fence\".",
+      "id": 133
+    },
+    {
+      "category": "Pun",
+      "joke": "What do you call a cow with no legs?\nGround beef.",
+      "id": 196
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "dateLibrary": "java8",
+  "library":"spring-cloud",
+  "apiPackage": "com.codecritique.javajokes.api",
+  "modelPackage": "com.codecritique.javajokes.model",
+  "interfaceOnly": true,
+  "useBeanValidation": true,
+  "useTags": true,
+  "performBeanValidation": true,
+  "serializableModel": true,
+  "openApiNullable": false,
+  "additionalModelTypeAnnotations": "@com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)"
+}

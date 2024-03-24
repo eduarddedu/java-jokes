@@ -1,0 +1,17 @@
+{
+  "dateLibrary": "java8-localdatetime",
+  "library": "spring-cloud",
+  "apiPackage": "com.external.jokes.rest.api",
+  "modelPackage": "com.external.jokes.rest.model",
+  "interfaceOnly": true,
+  "useBeanValidation": true,
+  "performBeanValidation": true,
+  "serializableModel": true,
+  "generatedConstructorWithRequiredArgs": false,
+  "useTags": true,
+  "removeEnumValuePrefix": false,
+  "documentationProvider": "springdoc",
+  "additionalModelTypeAnnotations": "@com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)"
+}
+
+
